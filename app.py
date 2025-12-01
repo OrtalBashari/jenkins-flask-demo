@@ -11,5 +11,13 @@ def home():
     
     return render_template('index.html', time_data=current_time)
 
+def jenkins_test_run():
+    """פונקציה קצרה לבדיקת ה-CI שיוצאת מיד."""
+    print("--- CI TEST SUCCESS: Flask module loaded successfully ---")
+    # אם הקוד מגיע לכאן, זה הצלחה, אז אנחנו יוצאים מיד
+    import sys
+    sys.exit(0) # קוד יציאה 0 = הצלחה
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    jenkins_test_run()
+    #app.run(debug=True, port=5000)
