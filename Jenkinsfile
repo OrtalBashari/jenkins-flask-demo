@@ -26,10 +26,10 @@ pipeline {
         
         stage('Run Tests (Optional)') {
             steps {
+                sh '''
                 echo "Running unit tests (if applicable)..."
-                // אם תצטרכי להפעיל פקודה מותקנת כאן, ייתכן שיהיה צורך להוסיף 
-                // את הנתיב ~/.local/bin ל-PATH, אבל ברוב המקרים זה עובד אוטומטית.
-                sh 'echo "No tests configured yet. Skipping."'
+                echo "No tests configured yet. Skipping."
+                '''
             }
         }
         
