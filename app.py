@@ -19,5 +19,4 @@ def jenkins_test_run():
     sys.exit(0) # קוד יציאה 0 = הצלחה
 
 if __name__ == '__main__':
-    jenkins_test_run()
-    #app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=5000)
